@@ -1,5 +1,4 @@
 import streamlit as st
-import random
 import pandas as pd
 from datetime import datetime
 
@@ -25,25 +24,6 @@ st.sidebar.info(
 
 
 st.title("🧮 Maryam's Calculator")
-
-math_facts = [
-
-    "Zero is the only number that cannot be represented in Roman numerals.",
-
-    "A circle has infinite lines of symmetry.",
-
-    "The number 1089 always produces a special pattern in math tricks.",
-
-    "Pi never ends and never repeats.",
-
-    "A googol is the number 1 followed by 100 zeros.",
-
-    "The symbol for division (÷) is called an obelus.",
-
-    "7 is often considered the world's favorite number.",
-
-    "There are infinitely many prime numbers."
-]
 
 num1 = st.number_input(
     "Enter the First Number",
@@ -110,11 +90,3 @@ if st.session_state.history:
         use_container_width=True
     )
 
-# FUN FACT SECTION
-st.subheader("🎲 Fun Math Facts")
-
-if st.button("Show Random Math Fact"):
-
-    random_fact = random.choice(math_facts)
-
-    st.info(random_fact)
